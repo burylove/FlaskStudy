@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>从字典中获取一个值： {{ mydict['key']|safe }}.</p>
+    <p>从列表中获取值： {{ mylist[3]|safe }}.</p>
+    <p>从列表中获取一个具有可变索引的值: {{ mylist[myintvar] |safe}}.</p>
+    <p>从对象方法中获取一个值: {{ myobj.somemethod()|safe }}.</p>
+</body>
+</html>

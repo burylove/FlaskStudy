@@ -1,0 +1,22 @@
+{% extends "4_base.html"%}
+{% import "bootstrap/wtf.html" as wtf%}
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  -->
+
+{% block title %}Flask-wtf{% endblock %}
+
+{% block page_content %}
+<div class = "page-header">
+    <h1>Hello, {% if name %} {{name}} {% else %}Strang {% endif %}!</h1>
+</div>
+
+{{wtf.quick_form(form)}}
+<p></p>
+<div>
+    <!-- 在客户端渲染时间戳 -->
+    <p>{{moment(current_time).format('LLL')}}.</p>
+    <p>{{moment(current_time).fromNow(refresh = True) }}</p>
+</div>
+
+{% endblock %}
+
+
